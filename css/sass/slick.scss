@@ -1,0 +1,148 @@
+/*=================================================================*/
+/*                      SLICK SETTINGS
+/*=================================================================*/
+.slick-slide {
+    height: auto;
+    outline: none;
+}
+
+.slick-next,.slick-prev {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: $colordefault;
+    border-radius: 0;
+    top: calc(50% - 40px);
+    z-index: 1;
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    transform: translateX(0px);
+}
+
+.slick-next:hover,.slick-next:focus,.slick-prev:hover,.slick-prev:focus {
+    background: $colordefault;
+}
+
+.slick-prev {
+    left: 0;
+    &:hover {
+        background: $colordefault;
+    }
+}
+
+.slick-next {
+    right: 0;
+    &:hover {
+        background: $colordefault;
+    }
+}
+
+.slick-next:before,.slick-next:after {
+    left: 20px;
+}
+
+.slick-prev:before,.slick-prev:after {
+    left: 17px;
+}
+
+.slick-prev:before {
+    content: '';
+    background: #FFF;
+    display: block;
+    width: 1px;
+    height: 14px;
+    top: 8px;
+    position: absolute;
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+}
+
+.slick-prev:after {
+    content: '';
+    background: #FFF;
+    display: block;
+    width: 1px;
+    height: 14px;
+    position: absolute;
+    top: 17px;
+    -ms-transform: rotate(135deg); /* IE 9 */
+    -webkit-transform: rotate(135deg); /* Chrome, Safari, Opera */
+    transform: rotate(135deg);
+}
+
+.slick-next:before {
+    content: '';
+    background: #FFF;
+    display: block;
+    width: 1px;
+    height: 14px;
+    top: 8px;
+    position: absolute;
+    -ms-transform: rotate(-45deg); /* IE 9 */
+    -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+    transform: rotate(-45deg);
+}
+
+.slick-next:after {
+    content: '';
+    background: #FFF;
+    display: block;
+    width: 1px;
+    height: 14px;
+    position: absolute;
+    top: 17px;
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+}
+
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+
+.slick-dots {
+    bottom: 0;
+    margin-top: 20px;
+    position: relative;
+}
+
+.slick-dots li {
+    width: 7px;
+    height: 7px;
+    margin: 0 3px;
+}
+
+.slick-dots li.slick-active {
+    width: 7px;
+    height: 7px;
+}
+
+.slick-dots li button {
+    width: 7px;
+    height: 7px;
+    padding: 0;
+}
+
+.slick-dots li.slick-active button:before {
+    background: $colororange;
+    opacity: 1;
+    height: 7px;
+    width: 7px;
+}
+
+.slick-dots li button:before {
+    content: '';
+    background: #E3E3E3;
+    opacity: 1;
+    border-radius: 100%;
+    height: 7px;
+    width: 7px;
+}
+
+.slick-dots li button:hover:before, .slick-dots li button:focus:before {
+    opacity: 1;
+    background: $colororange;
+}

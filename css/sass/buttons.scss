@@ -1,0 +1,112 @@
+/*=================================================================*/
+/*                     BUTTONS
+/*=================================================================*/
+.btn {
+    border-radius: 100px;
+    font-family: $fontstack;
+    font-size: 14px;
+    font-weight: 400;
+    overflow: hidden;
+    padding: 8.5px 20px;
+    position: relative;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    @include transition(.3s);
+    i {
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+}
+
+.btn:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+.btn-default {
+    color: #FFF;
+    background: $colororange;
+    &:hover {
+        background: $colorblue;
+        color: #FFF;
+        -webkit-transform: translateY(-3px);
+        -moz-transform: translateY(-3px);
+        -ms-transform: translateY(-3px);
+        -o-transform: translateY(-3px);
+        transform: translateY(-3px);
+        -webkit-box-shadow: 0px 8px 15px 0px rgba(0,0,0,0.2);
+        -moz-box-shadow: 0px 8px 15px 0px rgba(0,0,0,0.2);
+        box-shadow: 0px 8px 15px 0px rgba(0,0,0,0.2);
+    }
+}
+
+.btn-alt {
+    color: #FFF;
+    background: $colorblue;
+    &:hover {
+        color: #FFF;
+        background: $colororange;
+        -webkit-transform: translateY(-3px);
+        -moz-transform: translateY(-3px);
+        -ms-transform: translateY(-3px);
+        -o-transform: translateY(-3px);
+        transform: translateY(-3px);
+        -webkit-box-shadow: 0px 8px 15px 0px rgba(0,0,0,0.2);
+        -moz-box-shadow: 0px 8px 15px 0px rgba(0,0,0,0.2);
+        box-shadow: 0px 8px 15px 0px rgba(0,0,0,0.2);
+    }
+}
+
+.btn-border {
+    color: #FFF;
+    background: $colorblue;
+    &:hover {
+        color: #FFF;
+        background: $colordefault;
+        
+    }
+}
+
+.btn-border-light {
+    color: #FFF;
+    border: solid 1px #FFF;
+    background: transparent;
+    &:hover {
+        color: #000;
+        background: #FFF;
+        -webkit-transform: translateY(-3px);
+        -moz-transform: translateY(-3px);
+        -ms-transform: translateY(-3px);
+        -o-transform: translateY(-3px);
+        transform: translateY(-3px);
+        -webkit-box-shadow: 0px 8px 15px 0px rgba(0,0,0,0.2);
+        -moz-box-shadow: 0px 8px 15px 0px rgba(0,0,0,0.2);
+        box-shadow: 0px 8px 15px 0px rgba(0,0,0,0.2);
+    }
+}
+
+
+.btn-full {
+    text-align: center;
+    width: 100%;
+}
+
+.btn-group-lg>.btn, .btn-lg {
+    padding: 12px 26px;
+    font-size: 16px;
+}
+
+.btn-sm {
+    padding: 17px 16px;
+    font-size: 12px;
+    line-height: 0;
+}
+
+.btn-xs {
+    padding: 12px 10px;
+    font-size: 12px;
+    line-height: 0;
+}

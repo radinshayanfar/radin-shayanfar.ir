@@ -1,0 +1,118 @@
+/*=================================================================*/
+/*                      RESPONSIVE SETTINGS
+/*=================================================================*/
+@media (max-width: 1200px) and (min-width: 991px) {
+	.site-wrapper {
+		max-width: 970px;
+	}
+	main.content {
+		width: 675px;
+	}
+}
+
+@media only screen and (min-width: 767px) and (max-width: 991px) {
+
+}
+
+@media only screen and (max-width: 991px) {
+	.site-wrapper {
+		width: 100%;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	header.left {
+		top: 25px;
+		float: none !important;
+		-webkit-transform: translateX(-380px);
+	    -moz-transform: translateX(-380px);
+	    -ms-transform: translateX(-380px);
+	    -o-transform: translateX(-380px);
+	    transform: translateX(-380px);
+	    &.open {
+			-webkit-transform: translateX(0);
+		    -moz-transform: translateX(0);
+		    -ms-transform: translateX(0);
+		    -o-transform: translateX(0);
+		    transform: translateX(0);
+	    }
+	    button.close {
+	    	display: block;
+	    }
+	}
+	.mobile-header {
+		display: block;
+	}
+	main.content {
+		margin-top: 20px;
+		float: none !important;
+		width: 100%;
+	}
+}
+
+@media only screen and  (min-width: 991px) {
+
+}
+
+@media only screen and (max-width: 767px) {
+	.hero .cta h1 {
+		font-size: 48px;
+		line-height: 1.2;
+	}
+	.hero .cta h1 .dot {
+		display: none;
+	}
+	.hero .cta p {
+		font-size: 15px;
+		margin-bottom: 25px !important;
+	}
+	.hero {
+	    height: auto;
+	    margin-top: 0;
+	    padding: 60px 30px;
+	}
+	.fact-item {
+		margin: 20px 0;
+	}
+	.blog-item {
+		margin: 15px 0;
+	}
+}
+
+@media only screen and (min-width: 767px) {
+
+}
+
+@media only screen and (max-width: 515px) {
+	.pf-filter-wrapper {
+		display: block;
+	}
+	.portfolio-filter {
+		display: none;
+	}
+	.hero .cta h1 {
+		font-size: 36px;
+	}
+}
+
+@media only screen and (max-width: 360px) {
+
+}
+
+@media only screen and (max-width: 320px) {
+
+}
+
+@media only screen and (min-height: 750px) {
+
+}
+
+@media only screen and (max-height: 610px) {
+	header.left {
+		height: calc(100vh - 50px);
+		min-height: calc(100vh - 50px);
+		max-height: calc(100vh - 50px);
+		.footer {
+			margin-top: 50px !important;
+		}
+	}
+}

@@ -1,0 +1,35 @@
+/*
+Template Name: Bako
+Version: 1.0
+Author: PxlSolutions
+Author URI: http://themeforest.net/user/pxlsolutions
+Description: Personal Portfolio & Resume HTML Template
+
+[TABLE OF CONTENTS]
+
+01. Base
+02. Typography
+03. Header
+04. Skills
+05. Portfolio
+06. Clients
+07. Blog
+08. Helper
+09. Buttons
+10. Preloader
+11. Bootstrap Elements
+12. Theme Elements
+13. Slick Settings
+14. Responsive Settings
+
+*/
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i&display=swap&subset=cyrillic-ext');
+@import "sass/mixins";
+@import "sass/base";
+@import "sass/header";
+@import "sass/main";
+@import "sass/buttons";
+@import "sass/elements";
+@import "sass/slick";
+@import "sass/responsive";
