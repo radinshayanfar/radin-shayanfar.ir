@@ -1241,6 +1241,10 @@ section.padding-60 {
   margin-bottom: 20px;
 }
 
+.form-result {
+  margin-top: 20px;
+}
+
 .input-group-addon {
   padding: 0;
   font-size: 14px;

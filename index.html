@@ -21,14 +21,6 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
-	
-	<!-- Google reCAPTCHA -->
-	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-     <script>
-       function onSubmit(token) {
-         document.getElementById("contact-form").submit();
-       }
-     </script>
 
 </head>
 
@@ -468,7 +460,7 @@
 
 				<div class="col-md-8">
 					<!-- Contact Form -->
-					<form id="contact-form" class="contact-form" method="post" action="form/contact.php">
+					<form id="contact-form" class="contact-form" method="post" action="#contact">
 						
 						<div class="messages"></div>
 						
@@ -506,7 +498,15 @@
 							</div>
 						</div>
 
-						<button type="submit" name="submit" id="submit" value="Submit" class="btn btn-default g-recaptcha" data-sitekey="6LeYIcoZAAAAAH0_W8rAeV83ehkqGNin_U5C84DJ" data-callback='onSubmit'><i class="icon-paper-plane"></i>Send Message</button><!-- Send Button -->
+						<div id='recaptcha' class="g-recaptcha"
+							data-sitekey="6LeYIcoZAAAAAH0_W8rAeV83ehkqGNin_U5C84DJ"
+							data-callback="onSubmit"
+							data-size="invisible"></div>
+						
+						<!-- AJAX will be here -->
+						<div id="submit-result">
+							<button name="submit" id="submit" value="Submit" class="btn btn-default"><i class="icon-paper-plane"></i>Send Message</button><!-- Send Button -->
+						</div>
 
 					</form>
 					<!-- Contact Form end -->
@@ -538,6 +538,10 @@
 <script src="js/contact.js"></script>
 <script src="js/validator.js"></script>
 <script src="js/custom.js"></script>
+
+<!-- Google reCAPTCHA -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="js/recaptcha.js"></script>
 
 </body>
 </html>

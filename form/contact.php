@@ -1,13 +1,19 @@
 <?php
+
+require_once('../vendor/autoload.php');
+
+// $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+// $dotenv->load();
+
 /*
  *  CONFIGURE EVERYTHING HERE
  */
 
 // an email address that will be in the From field of the email.
-$from = 'Demo contact form <YOUR_EMAIL@DOMAIN.COM>';
+// $from = 'Demo contact form <YOUR_EMAIL@DOMAIN.COM>';
 
 // an email address that will receive the email with the output of the form
-$sendTo = 'Demo contact form <YOUR_EMAIL@DOMAIN.COM>';
+// $sendTo = 'Demo contact form <YOUR_EMAIL@DOMAIN.COM>';
 
 // subject of the email
 $subject = 'New message from contact form';
@@ -44,16 +50,18 @@ try
     }
 
     // All the neccessary headers for the email.
-    $headers = array('Content-Type: text/plain; charset="UTF-8";',
-        'From: ' . $from,
-        'Reply-To: ' . $from,
-        'Return-Path: ' . $from,
-    );
+    // $headers = array('Content-Type: text/plain; charset="UTF-8";',
+    //     'From: ' . $from,
+    //     'Reply-To: ' . $from,
+    //     'Return-Path: ' . $from,
+    // );
     
     // Send email
-    mail($sendTo, $subject, $emailText, implode("\n", $headers));
+    // mail($sendTo, $subject, $emailText, implode("\n", $headers));
 
-    $responseArray = array('type' => 'success', 'message' => $okMessage);
+    // $responseArray = array('type' => 'success', 'message' => $okMessage);
+    // echo $emailText;
+    $responseArray = [$emailText];
 }
 catch (\Exception $e)
 {
