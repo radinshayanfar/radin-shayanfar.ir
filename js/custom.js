@@ -215,7 +215,7 @@ $(function(){
     /*=========================================================================
      One Page Scroll with jQuery
      =========================================================================*/
-    $('.vertical-menu li a[href^="#"]:not([href="#"])').on('click', function(event) {
+    $('.vertical-menu li a[href^="#"]:not([href="#"]), .hero-ln').on('click', function(event) {
       var $anchor = $(this);
       $('html, body').stop().animate({
         scrollTop: $($anchor.attr('href')).offset().top-50
