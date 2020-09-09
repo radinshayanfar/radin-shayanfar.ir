@@ -1,9 +1,14 @@
 <?php
 
 require_once('../vendor/autoload.php');
+require_once('TelegramAPI.php');
 
-// $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-// $dotenv->load();
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+$recaptcha = new \ReCaptcha\ReCaptcha($_ENV['RECAPTCHA_SECRET_KEY']);
+$resp = $recaptcha->setExpectedHostname($_SERVER['SERVER_NAME'])
+                    ->verify($_POST['g-recaptcha-response'], $_SERVER['REMOTE_ADDR']);
 
 /*
  *  CONFIGURE EVERYTHING HERE
@@ -20,7 +25,7 @@ $subject = 'New message from contact form';
 
 // form field names and their translations.
 // array variable name => Text to appear in the email
-$fields = array('InputName' => 'Name', 'email' => 'InputEmail', 'InputMessage' => 'Message'); 
+$fields = array('InputName' => 'Name', 'InputEmail' => 'email', 'InputSubject' => 'subject', 'InputMessage' => 'Message'); 
 
 // message that will be displayed when everything is OK :)
 $okMessage = 'Your message successfully submitted. Thank you, I will get back to you soon!';
@@ -37,6 +42,8 @@ error_reporting(E_ALL & ~E_NOTICE);
 
 try
 {
+    if (! $resp->isSuccess())
+        throw new Exception('reCAPTCHA not successful');
 
     if(count($_POST) == 0) throw new \Exception('Form is empty');
             
@@ -56,12 +63,12 @@ try
     //     'Return-Path: ' . $from,
     // );
     
-    // Send email
-    // mail($sendTo, $subject, $emailText, implode("\n", $headers));
+    // Send message
+    $api = new TelegramAPI($_ENV['TOKEN']);
+    $resp = array('chat_id' => $_ENV['MY_CHAT_ID'], 'text' => $emailText);
+    $api->postSend('sendMessage', $resp);
 
-    // $responseArray = array('type' => 'success', 'message' => $okMessage);
-    // echo $emailText;
-    $responseArray = [$emailText];
+    $responseArray = array('type' => 'success', 'message' => $okMessage);
 }
 catch (\Exception $e)
 {

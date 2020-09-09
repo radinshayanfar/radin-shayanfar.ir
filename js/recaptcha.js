@@ -9,7 +9,7 @@ function onSubmit(token) {
     
     $.post('form/contact.php', $('#contact-form').serialize(), function(data) {
         // $('#AJAXPageResult').html(data);
-        $('#submit-result').html(data);
+        $('#submit-result').html(data.message);
     });
 }
 
