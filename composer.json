@@ -1,0 +1,6 @@
+{
+    "require": {
+        "google/recaptcha": "1.2",
+        "vlucas/phpdotenv": "^5.1"
+    }
+}

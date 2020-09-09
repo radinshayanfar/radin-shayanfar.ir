@@ -20,7 +20,15 @@
 	<!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+	<![endif]-->
+	
+	<!-- Google reCAPTCHA -->
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+     <script>
+       function onSubmit(token) {
+         document.getElementById("contact-form").submit();
+       }
+     </script>
 
 </head>
 
@@ -435,25 +443,25 @@
 				
 				<div class="col-md-4 mb-4 mb-md-0">
 					<!-- contact info -->
-					<div class="contact-info mb-5">
+					<!-- <div class="contact-info mb-5">
 						<i class="icon-phone"></i>
 						<div class="details">
 							<h5>Phone</h5>
 							<span>+44 1632 960428</span>
 						</div>
-					</div>
+					</div> -->
 					<div class="contact-info mb-5">
 						<i class="icon-envelope"></i>
 						<div class="details">
 							<h5>Email address</h5>
-							<span>hello@bako.com</span>
+							<span>me@rshayanfar.ir</span>
 						</div>
 					</div>
 					<div class="contact-info">
 						<i class="icon-location-pin"></i>
 						<div class="details">
 							<h5>Location</h5>
-							<span>West Palm Beach, 4669 Travis Street</span>
+							<span>Tehran, Iran</span>
 						</div>
 					</div>
 				</div>
@@ -498,7 +506,7 @@
 							</div>
 						</div>
 
-						<button type="submit" name="submit" id="submit" value="Submit" class="btn btn-default"><i class="icon-paper-plane"></i>Send Message</button><!-- Send Button -->
+						<button type="submit" name="submit" id="submit" value="Submit" class="btn btn-default g-recaptcha" data-sitekey="6LeYIcoZAAAAAH0_W8rAeV83ehkqGNin_U5C84DJ" data-callback='onSubmit'><i class="icon-paper-plane"></i>Send Message</button><!-- Send Button -->
 
 					</form>
 					<!-- Contact Form end -->
