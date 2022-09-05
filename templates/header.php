@@ -99,7 +99,7 @@
 				</ul>
 
 				<!-- copyright -->
-				<span class="copyright">© 2020 Radin Shayanfar</span>
+				<span class="copyright">© <?php echo date("Y"); ?> Radin Shayanfar</span>
 			</div>
 		</div>
 	</header>
