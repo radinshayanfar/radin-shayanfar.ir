@@ -1647,6 +1647,17 @@ section.padding-60 {
   main.content {
     width: 675px;
   }
+
+  .skills-container {
+    gap: 10px 15px;
+    grid-template-columns: auto auto;
+  }
+}
+@media only screen and (min-width: 767px) and (max-width: 991px) {
+  .skills-container {
+    gap: 10px 30px;
+    grid-template-columns: auto auto auto;
+  }
 }
 @media only screen and (max-width: 991px) {
   .site-wrapper {
@@ -1712,6 +1723,17 @@ section.padding-60 {
 
   .blog-item {
     margin: 15px 0;
+  }
+
+  .skills-container {
+    gap: 10px 15px;
+    grid-template-columns: auto auto;
+  }
+}
+@media only screen and (max-width: 620px) {
+  .skills-container {
+    gap: 10px 0px;
+    grid-template-columns: auto;
   }
 }
 @media only screen and (max-width: 515px) {
