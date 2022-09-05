@@ -30,7 +30,12 @@ require('./templates/header.php');
 			</div>
 			<div class="col-md-9">
 				<h2 class="mt-4 mt-md-0 mb-4">Hello,</h2>
-				<p class="mb-0">I am Radin Shayanfar, computer engineer from Tehran, Iran. I have 10 years of experience in programming.</p>
+				<p class="mb-0">
+					I am Radin Shayanfar, a senior computer engineering student from Tehran, Iran. Over the last decade, I have developed a strong passion for computer science, especially machine learning, deep learning, computer vision, and speech processing. Currently, my main focus is computer vision and deep generative adversarial networks.
+				</p>
+				<p class="mb-0">
+					Latest version of my full CV is available below (website contents are updated less frequently).
+				</p>
 				<div class="row my-4">
 					<div class="col-md-6">
 						<p class="mb-2">Name: <span class="text-dark">Radin Shayanfar</span></p>
@@ -42,7 +47,7 @@ require('./templates/header.php');
 					</div>
 				</div>
 				<a href="cv.pdf" class="btn btn-default mr-3"><i class="icon-cloud-download" target="_blank"></i>Download CV</a>
-				<a href="#contact" class="btn btn-alt mt-2 mt-md-0 mt-xs-2"><i class="icon-envelope"></i>Hire me</a>
+				<a href="#contact" class="btn btn-alt mt-2 mt-md-0 mt-xs-2"><i class="icon-envelope"></i>Contact Me</a>
 			</div>
 		</div>
 	</section>
@@ -52,126 +57,25 @@ require('./templates/header.php');
 		<h3 class="section-title">My skills</h3>
 		<div class="spacer" data-height="40"></div>
 		
-		<p class="mb-0">I have experience in Java, PHP, Laravel, MySQL and C. I'm also familiar with Python, Redis and tools like Git, Docker, ... . I had some readings in Machine Learning and Deep Learning.</p>
+		<p class="mb-0">
+			Currently, I primarily use Python and Jupyter Notebook for my regular projects and machine learning research. I basically use Keras, PyTorch, OpenCV, NumPy, and other similar libraries for that. Moreover, I have developed numerous websites and web APIs in the past few years using web languages and frameworks; HTML, CSS, PHP, Laravel, and Flask to name a few.
+			I'm also familiar with C, Java, functional programming languages (like LISP, Racket, and ML), databases (such as MySQL and Redis), DevOps tools (Docker and Kubernetes), LaTeX, Git, and Photoshop. I have experience with parallelization tools (like OpenMP and CUDA) and Arduino programming too.
+		</p>
 
 		<div class="row mt-5">
 
-			<div class="col-md-6">
-				<!-- skill item -->
-				<div class="skill-item">
-					<div class="skill-info clearfix">
-						<h4 class="float-left mb-3 mt-0">Java</h4>
-						<span class="float-right">90%</span>
-					</div>
-					<div class="progress">
-						<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="90">
-						</div>
-					</div>
-					<div class="spacer" data-height="50"></div>
-				</div>
-			</div>
-
-			<div class="col-md-6">
-				<!-- skill item -->
-				<div class="skill-item">
-					<div class="skill-info clearfix">
-						<h4 class="float-left mb-3 mt-0">Python</h4>
-						<span class="float-right">80%</span>
-					</div>
-					<div class="progress">
-						<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80">
-						</div>
-					</div>
-					<div class="spacer" data-height="50"></div>
-				</div>
-			</div>
-
-			<div class="col-md-6">
-				<!-- skill item -->
-				<div class="skill-item">
-					<div class="skill-info clearfix">
-						<h4 class="float-left mb-3 mt-0">PHP</h4>
-						<span class="float-right">95%</span>
-					</div>
-					<div class="progress">
-						<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="95">
-						</div>
-					</div>
-					<div class="spacer" data-height="50"></div>
-				</div>
-			</div>
-
-			<div class="col-md-6">
-				<!-- skill item -->
-				<div class="skill-item">
-					<div class="skill-info clearfix">
-						<h4 class="float-left mb-3 mt-0">C</h4>
-						<span class="float-right">95%</span>
-					</div>
-					<div class="progress">
-						<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="95">
-						</div>
-					</div>
-					<div class="spacer" data-height="50"></div>
-				</div>
-			</div>
-
-			<div class="col-md-6">
-				<!-- skill item -->
-				<div class="skill-item">
-					<div class="skill-info clearfix">
-						<h4 class="float-left mb-3 mt-0">Laravel</h4>
-						<span class="float-right">60%</span>
-					</div>
-					<div class="progress">
-						<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="60">
-						</div>
-					</div>
-					<div class="spacer" data-height="50"></div>
-				</div>
-			</div>
-
-			<div class="col-md-6">
-				<!-- skill item -->
-				<div class="skill-item">
-					<div class="skill-info clearfix">
-						<h4 class="float-left mb-3 mt-0">Database (MySQL, Redis)</h4>
-						<span class="float-right">90%</span>
-					</div>
-					<div class="progress">
-						<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="90">
-						</div>
-					</div>
-					<div class="spacer d-md-none d-lg-none" data-height="50"></div>
-				</div>
-			</div>
-
-			<div class="col-md-6">
-				<!-- skill item -->
-				<div class="skill-item">
-					<div class="skill-info clearfix">
-						<h4 class="float-left mb-3 mt-0">Machine Learning, Deep Learning</h4>
-						<span class="float-right">60%</span>
-					</div>
-					<div class="progress">
-						<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="60">
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-md-6">
-				<!-- skill item -->
-				<div class="skill-item">
-					<div class="skill-info clearfix">
-						<h4 class="float-left mb-3 mt-0">Git, Linux, Server Administration</h4>
-						<span class="float-right">70%</span>
-					</div>
-					<div class="progress">
-						<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="70">
-						</div>
-					</div>
-				</div>
+			<div class="skills-container col-md-12">
+				<h4 class="skills-item">Python</h4>
+				<h4 class="skills-item">Keras, PyTorch, OpenCV</h4>
+				<h4 class="skills-item">CUDA, OpenMP</h4>
+				<h4 class="skills-item">PHP, Laravel</h4>
+				<h4 class="skills-item">HTML, CSS, JavaScript</h4>
+				<h4 class="skills-item">MySQL, Redis</h4>
+				<h4 class="skills-item">C</h4>
+				<h4 class="skills-item">Java</h4>
+				<h4 class="skills-item">Lisp, Racket, ML</h4>
+				<h4 class="skills-item">LaTeX</h4>
+				<h4 class="skills-item">Docker, Kubernetes</h4>
 			</div>
 
 		</div>

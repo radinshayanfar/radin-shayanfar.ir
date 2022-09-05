@@ -88,6 +88,29 @@ section {
 /*=================================================================*/
 /*                      SKILLS                              
 /*=================================================================*/
+
+.skills-container {
+	display: grid;
+	gap: 10px 50px;
+	grid-template-columns: auto auto auto;
+
+	h4.skills-item {
+		text-align: left;
+		font-size: 14px;
+		margin: 0;
+		padding: 10px 15px;
+		border-radius: 30px;
+		border: 3px solid rgba(255, 89, 89, 1);
+		background-color: rgba(255, 89, 89, 0.4);
+	}
+
+	h4::before {
+		font-family: "Font Awesome 5 Free";
+		content: "\f7d9";
+		margin-right: 10px;
+	}
+}
+
 .skill-item .skill-info span {
   font-size: 14px;
 }

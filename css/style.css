@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 Template Name: Bako
 Version: 1.0
@@ -461,6 +462,26 @@ section.padding-60 {
 /*=================================================================*/
 /*                      SKILLS                              
 /*=================================================================*/
+.skills-container {
+  display: grid;
+  gap: 10px 50px;
+  grid-template-columns: auto auto auto;
+}
+.skills-container h4.skills-item {
+  text-align: left;
+  font-size: 14px;
+  margin: 0;
+  padding: 10px 15px;
+  border-radius: 30px;
+  border: 3px solid #ff5959;
+  background-color: rgba(255, 89, 89, 0.4);
+}
+.skills-container h4::before {
+  font-family: "Font Awesome 5 Free";
+  content: "";
+  margin-right: 10px;
+}
+
 .skill-item .skill-info span {
   font-size: 14px;
 }
