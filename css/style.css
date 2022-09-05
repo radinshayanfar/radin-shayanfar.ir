@@ -467,14 +467,24 @@ section.padding-60 {
   gap: 10px 50px;
   grid-template-columns: auto auto auto;
 }
-.skills-container h4.skills-item {
+.skills-container h4 {
   text-align: left;
   font-size: 14px;
   margin: 0;
   padding: 10px 15px;
   border-radius: 30px;
-  border: 3px solid #ff5959;
+  border: 3px solid #FF5959;
   background-color: rgba(255, 89, 89, 0.4);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.skills-container h4:hover {
+  background: #FF5959;
+  color: #FFF;
+  -webkit-box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.2);
 }
 .skills-container h4::before {
   font-family: "Font Awesome 5 Free";
