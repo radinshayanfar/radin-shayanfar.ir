@@ -89,25 +89,74 @@ require('./templates/header.php');
 		<!-- portfolio filter (desktop) -->
 		<ul class="portfolio-filter list-inline">
 			<li class="current list-inline-item" data-filter="*">All Projects</li>
-			<li class="list-inline-item" data-filter=".bot">Telgram Bot</li>
+			<li class="list-inline-item" data-filter=".ml">Machine Learning</li>
 			<li class="list-inline-item" data-filter=".web">Web Development</li>
-			<li class="list-inline-item" data-filter=".java">Java</li>
-			<li class="list-inline-item" data-filter=".ml">ML</li>
+			<li class="list-inline-item" data-filter=".bot">Telgram Bot</li>
 		</ul>
 
 		<!-- portfolio filter (mobile) -->
 		<div class="pf-filter-wrapper mb-4">
 			<select class="portfolio-filter-mobile">
 				<option value="*">All Projects</option>
-				<option value=".bot">Telgram Bot</option>
+				<option value=".ml">Machine Learning</option>
 				<option value=".web">Web Development</option>
-				<option value=".java">Java</option>
-				<option value=".ml">ML</option>
+				<option value=".bot">Telgram Bot</option>
 			</select>
 		</div>
 
 		<!-- portolio wrapper -->
 		<div class="row portfolio-wrapper">
+
+			<!-- portfolio item -->
+			<div class="col-md-4 col-sm-6 grid-item ml">
+				<a href="work-gan.php">
+					<div class="portfolio-item">
+						<div class="details">
+							<h4 class="title">Persian Handwritten Characters Generation</h4>
+							<span class="term">GAN, Computer Vision</span>
+						</div>
+						<span class="plus-icon">+</span>
+						<div class="thumb">
+							<img src="images/gan_thumbnail.png" alt="Persian Handwritten Characters Generation" />
+							<div class="mask"></div>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<!-- portfolio item -->
+			<div class="col-md-4 col-sm-6 grid-item ml">
+				<a href="work-speechbrain.php">
+					<div class="portfolio-item">
+						<div class="details">
+							<h4 class="title">Speaker Verification</h4>
+							<span class="term">Deep Learning, Speech Processing</span>
+						</div>
+						<span class="plus-icon">+</span>
+						<div class="thumb">
+							<img src="images/speechbrain_thumbnail.png" alt="Speaker Verification" />
+							<div class="mask"></div>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<!-- portfolio item -->
+			<div class="col-md-4 col-sm-6 grid-item web">
+				<a href="work-habco.php">
+					<div class="portfolio-item">
+						<div class="details">
+							<h4 class="title">Habco</h4>
+							<span class="term">Laravel, REST API</span>
+						</div>
+						<span class="plus-icon">+</span>
+						<div class="thumb">
+							<img src="images/habco_thumbnail.png" alt="Habco" />
+							<div class="mask"></div>
+						</div>
+					</div>
+				</a>
+			</div>
 			
 			<!-- portfolio item -->
 			<div class="col-md-4 col-sm-6 grid-item web">
@@ -144,40 +193,6 @@ require('./templates/header.php');
 			</div>
 
 			<!-- portfolio item -->
-			<div class="col-md-4 col-sm-6 grid-item java">
-				<a href="work-jpotify.php">
-					<div class="portfolio-item">
-						<div class="details">
-							<h4 class="title">Jpotify</h4>
-							<span class="term">Java</span>
-						</div>
-						<span class="plus-icon">+</span>
-						<div class="thumb">
-							<img src="images/jpotify_thumbnail.png" alt="Jpotify" />
-							<div class="mask"></div>
-						</div>
-					</div>
-				</a>
-			</div>
-
-			<!-- portfolio item -->
-			<div class="col-md-4 col-sm-6 grid-item web">
-				<a href="work-konkur98.php">
-					<div class="portfolio-item">
-						<div class="details">
-							<h4 class="title">Konkur98</h4>
-							<span class="term">Web Development</span>
-						</div>
-						<span class="plus-icon">+</span>
-						<div class="thumb">
-							<img src="images/konkur98_thumbnail.png" alt="Konkur98" />
-							<div class="mask"></div>
-						</div>
-					</div>
-				</a>
-			</div>
-
-			<!-- portfolio item -->
 			<div class="col-md-4 col-sm-6 grid-item ml">
 				<a href="work-captcha.php">
 					<div class="portfolio-item">
@@ -194,34 +209,17 @@ require('./templates/header.php');
 				</a>
 			</div>
 
-			<!-- portfolio item -->
-			<div class="col-md-4 col-sm-6 grid-item web">
-				<a href="work-chaladz.php">
-					<div class="portfolio-item">
-						<div class="details">
-							<h4 class="title">Chaladz Design</h4>
-							<span class="term">Web Development, Backend</span>
-						</div>
-						<span class="plus-icon">+</span>
-						<div class="thumb">
-							<img src="images/chaladz_thumbnail.png" alt="Chaladz Design" />
-							<div class="mask"></div>
-						</div>
-					</div>
-				</a>
-			</div>
-
 		</div>
 		
 		<!-- more button -->
-		<!-- <div class="load-more text-center mt-4">
-			<a href="javascript:" class="btn btn-default"><i class="fas fa-circle-notch"></i> Load more</a> -->
+		<div class="load-more text-center mt-4">
+			<a href="javascript:" class="btn btn-default"><i class="fas fa-circle-notch"></i> Load more</a>
 			<!-- numbered pagination (hidden for infinite scroll) -->
-			<!-- <ul class="portfolio-pagination list-inline d-none">
+			<ul class="portfolio-pagination list-inline d-none">
 				<li class="list-inline-item">1</li>
 				<li class="list-inline-item"><a href="works-2.html">2</a></li>
 			</ul>
-		</div> -->
+		</div>
 	</section>
 
 	<!-- section education -->
@@ -233,7 +231,7 @@ require('./templates/header.php');
 		<div class="timeline">
 			<div class="entry">
 				<div class="title">
-					<span>2018 - Present</span>
+					<span>2018 - 2023</span>
 				</div>
 				<div class="body">
 					<h4 class="mt-0">Bachelor of Science</h4>
@@ -331,6 +329,14 @@ require('./templates/header.php');
 								<textarea name="InputMessage" id="InputMessage" class="form-control" rows="5" placeholder="Message" required="required" data-error="Message is required."></textarea>
 								<div class="help-block with-errors"></div>
 							</div>
+						</div>
+					</div>
+
+					<div class="column col-md-12">
+						<div class="form-group">
+							This site is protected by reCAPTCHA and the Google
+							<a href="https://policies.google.com/privacy">Privacy Policy</a> and
+							<a href="https://policies.google.com/terms">Terms of Service</a> apply.
 						</div>
 					</div>
 

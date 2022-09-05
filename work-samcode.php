@@ -23,7 +23,7 @@ require('./templates/header.php');
         <!-- portfolio content -->
         <div class="portfolio-content mt-5">
             <h3>Overview</h3>
-            <p>SamCode is a programming contest for high school students which holds every year by <a href="http://helli3school.ir">Allameh Helli 3 Junior High School (NODET).</a> <br>
+            <p>SamCode is a programming contest for high school students which is held every year by <a href="http://helli3school.ir">Allameh Helli 3 Junior High School (NODET).</a> <br>
                 I'm proud to state that I'm in charge of the design, development and maintenance of SamCode's website.</p>
         </div>
     </section>

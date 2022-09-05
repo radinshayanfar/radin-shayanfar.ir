@@ -23,8 +23,13 @@ require('./templates/header.php');
 		<!-- portfolio content -->
 		<div class="portfolio-content mt-5">
 			<h3>Overview</h3>
-			<p>A graphical music player, written in Java. <br>
-			Has features like playlists and sharing music with friends over network.</p>
+			<p>
+				Development of a graphical music player, written in Java with use of Swing library for UI design.
+				The player has features like playlists and music sharing with friends over network.
+			</p>
+			<p>
+				This is the final project assignment of my Advanced Programming course.
+			</p>
 		</div>
 	</section>
 	
