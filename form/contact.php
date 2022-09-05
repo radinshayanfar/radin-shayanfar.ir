@@ -3,12 +3,27 @@
 require_once('../vendor/autoload.php');
 require_once('TelegramAPI.php');
 
+use GuzzleHttp\Client;
+
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
-$recaptcha = new \ReCaptcha\ReCaptcha($_ENV['RECAPTCHA_SECRET_KEY']);
-$resp = $recaptcha->setExpectedHostname($_SERVER['SERVER_NAME'])
-                    ->verify($_POST['g-recaptcha-response'], $_SERVER['REMOTE_ADDR']);
+
+function recaptcha_verify($secret, $recaptcha_resp) {
+    $client = new Client();
+    $response = $client->request('POST', 'https://www.google.com/recaptcha/api/siteverify', [
+        'form_params' => [
+            'secret' => $secret,
+            'response' => $recaptcha_resp,
+            'remoteip' => $_SERVER['REMOTE_ADDR'],
+        ]
+    ]);
+    $response = json_decode($response->getBody());
+    return $response->success;
+}
+
+
+$success = recaptcha_verify($_ENV['RECAPTCHA_SECRET_KEY'], $_POST['g-recaptcha-response']);
 
 /*
  *  CONFIGURE EVERYTHING HERE
@@ -42,7 +57,7 @@ error_reporting(E_ALL & ~E_NOTICE);
 
 try
 {
-    if (! $resp->isSuccess())
+    if (! $success)
         throw new Exception('reCAPTCHA not successful');
 
     if(count($_POST) == 0) throw new \Exception('Form is empty');

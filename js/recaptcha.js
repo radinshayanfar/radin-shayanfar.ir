@@ -6,10 +6,10 @@ function onSubmit(token) {
     // display loading icon
     // $( '.load-submit .btn i' ).css('display', 'inline-block');
     // $( '.load-submit .btn i' ).addClass('fa-spin');
-    
+
     $.post('form/contact.php', $('#contact-form').serialize(), function(data) {
         // $('#AJAXPageResult').html(data);
-        $('#submit-result').html(data.message);
+        $('#submit-result').html('<div class="column col-md-12"><div class="form-group">' + data.message + '</div></div>');
     });
 }
 
