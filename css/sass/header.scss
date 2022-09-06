@@ -6,8 +6,9 @@ header {
 		color: #FFF;
 		background: $colorblue;
 		border-radius: 20px;
-		min-height: 620px;
-		max-height: 620px;
+		height: calc(100vh - 100px);
+		min-height: calc(100vh - 100px);
+		max-height: calc(100vh - 100px);
 		top: 50px;
 		overflow: hidden;
 		position: fixed;

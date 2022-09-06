@@ -177,8 +177,9 @@ header.left {
   color: #FFF;
   background: #4A63E7;
   border-radius: 20px;
-  min-height: 620px;
-  max-height: 620px;
+  height: calc(100vh - 100px);
+  min-height: calc(100vh - 100px);
+  max-height: calc(100vh - 100px);
   top: 50px;
   overflow: hidden;
   position: fixed;
@@ -1749,12 +1750,7 @@ section.padding-60 {
     font-size: 36px;
   }
 }
-@media only screen and (max-height: 610px) {
-  header.left {
-    height: calc(100vh - 50px);
-    min-height: calc(100vh - 50px);
-    max-height: calc(100vh - 50px);
-  }
+@media only screen and (max-height: 640px) {
   header.left .footer {
     margin-top: 50px !important;
   }
