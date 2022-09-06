@@ -57,8 +57,8 @@
 			<span></span>
 			<span></span>
 		</button>
-		<a href="index.html" class="logo"><img src="images/me70x70.png" alt="Radin Shayanfar" /></a>
-		<a href="index.html" class="site-title dot ml-2">Radin Shayanfar</a>
+		<a href="index.php" class="logo"><img src="images/me70x70.png" alt="Radin Shayanfar" /></a>
+		<a href="index.php" class="site-title dot ml-2">Radin Shayanfar</a>
 	</div>
 
 	<!-- header -->
@@ -67,8 +67,8 @@
 			<span aria-hidden="true">&times;</span>
 		</button>
 		<div class="header-inner d-flex align-items-start flex-column">
-			<a href="index.html"><img src="images/me70x70.png" alt="Radin Shayanfar" /></a>
-			<a href="index.html" class="site-title dot mt-3">Radin Shayanfar</a>
+			<a href="index.php"><img src="images/me70x70.png" alt="Radin Shayanfar" /></a>
+			<a href="index.php" class="site-title dot mt-3">Radin Shayanfar</a>
 			<span class="site-slogan">Computer Engineer</span>
 
             <?php
