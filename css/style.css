@@ -467,6 +467,7 @@ section.padding-60 {
   display: grid;
   gap: 10px 50px;
   grid-template-columns: auto auto auto;
+  user-select: none;
 }
 .skills-container h4 {
   text-align: left;

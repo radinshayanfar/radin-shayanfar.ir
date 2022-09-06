@@ -93,6 +93,7 @@ section {
 	display: grid;
 	gap: 10px 50px;
 	grid-template-columns: auto auto auto;
+	user-select: none;
 
 	h4 {
 		text-align: left;
