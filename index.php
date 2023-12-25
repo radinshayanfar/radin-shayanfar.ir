@@ -10,8 +10,8 @@ require('./templates/header.php');
 	<!-- section hero -->
 	<section class="hero background parallax shadow-dark d-flex align-items-center" id="home" data-image-src="images/hero-bg900x600.jpg">
 		<div class="cta mx-auto mt-2">
-			<h1 class="mt-0 mb-4">I’m Radin Shayanfar<span class="dot"></span></h1>
-			<p class="mb-4">Computer Engineering student at Amirkabir University of Technology</p>
+			<h1 class="mt-0 mb-4">I'm Radin Shayanfar<span class="dot"></span></h1>
+			<p class="mb-4">Computer Engineering student and NLP researcher at Queen's University</p>
 			<a href="#works" class="hero-ln btn btn-default btn-lg mr-3"><i class="icon-grid"></i>View Portfolio</a>
 			<div class="spacer d-md-none d-lg-none d-sm-none" data-height="10"></div>
 			<a href="#contact" class="hero-ln btn btn-border-light btn-lg"><i class="icon-envelope"></i>Contact Me</a>
@@ -31,7 +31,7 @@ require('./templates/header.php');
 			<div class="col-md-9">
 				<h2 class="mt-4 mt-md-0 mb-4">Hello,</h2>
 				<p class="mb-0">
-					I am Radin Shayanfar, a senior computer engineering student from Tehran, Iran. Over the last decade, I have developed a strong passion for computer science, especially machine learning, deep learning, computer vision, and speech processing. Currently, my main focus is computer vision and deep generative adversarial networks.
+					I am Radin Shayanfar, a master's computer engineering student based in Canada. Over the last decade, I have developed a strong passion for computer science, especially machine learning, deep learning, and computer vision. Currently, my main focus is natural language processing.
 				</p>
 				<p class="mb-0">
 					Latest version of my full CV is available below (website contents are updated less frequently).
@@ -59,11 +59,10 @@ require('./templates/header.php');
 		
 		<p class="mb-0">
 			Currently, I primarily use Python and Jupyter Notebook for my regular projects and machine learning research. I basically use Keras, PyTorch, OpenCV, NumPy, and other similar libraries for that. Moreover, I have developed numerous websites and web APIs in the past few years using web languages and frameworks; HTML, CSS, PHP, Laravel, and Flask to name a few.
-			I'm also familiar with C, Java, functional programming languages (like LISP, Racket, and ML), databases (such as MySQL and Redis), DevOps tools (Docker and Kubernetes), LaTeX, Git, and Photoshop. I have experience with parallelization tools (like OpenMP and CUDA) and Arduino programming too.
+			I'm also familiar with C, Java, functional programming languages (like LISP, Racket, and ML), databases (such as MySQL and Redis), big data technologies (Apache Hadoop, Kafka, and Spark), DevOps tools (Docker and Kubernetes), LaTeX, Git, and Photoshop. I have experience with parallelization tools (like OpenMP and CUDA) and Arduino programming too.
 		</p>
 
 		<div class="row mt-5">
-
 			<div class="skills-container col-md-12">
 				<h4 class="skills-item">Python</h4>
 				<h4 class="skills-item">Keras, PyTorch, OpenCV</h4>
@@ -76,6 +75,7 @@ require('./templates/header.php');
 				<h4 class="skills-item">Lisp, Racket, ML</h4>
 				<h4 class="skills-item">LaTeX</h4>
 				<h4 class="skills-item">Docker, Kubernetes</h4>
+				<h4 class="skills-item">Hadoop, Kafka, Spark</h4>
 			</div>
 
 		</div>
@@ -231,11 +231,29 @@ require('./templates/header.php');
 		<div class="timeline">
 			<div class="entry">
 				<div class="title">
+					<span>2023-2025</span>
+				</div>
+				<div class="body">
+					<h4 class="mt-0">Master of Applied Science</h4>
+					<p>Researching on Natural Language Processing at Queen's University</p>
+				</div>
+			</div>
+			<div class="entry">
+				<div class="title">
+					<span>2023</span>
+				</div>
+				<div class="body">
+					<h4 class="mt-0">Bid Data Engineer</h4>
+					<p>Bale Messenger</p>
+				</div>
+			</div>
+			<div class="entry">
+				<div class="title">
 					<span>2018 - 2023</span>
 				</div>
 				<div class="body">
 					<h4 class="mt-0">Bachelor of Science</h4>
-					<p>Studying Computer Engineering at Amirkabir University of Technology.</p>
+					<p>Graduated with Computer Engineering degree at Amirkabir University of Technology.</p>
 				</div>
 			</div>
 			<div class="entry">
