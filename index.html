@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-S7QFCL6LM9"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-S7QFCL6LM9');
+	</script>
+
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Radin Shayanfar</title>
+	<meta name="description" content="Radin Shayanfar personal website">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="shortcut icon" type="image/x-icon" href="images/me32x32.png">
+
+	<!-- STYLESHEETS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="all">
+	<link rel="stylesheet" href="css/all.min.css" type="text/css" media="all">
+	<link rel="stylesheet" href="css/simple-line-icons.css" type="text/css" media="all">
+	<link rel="stylesheet" href="css/slick.css" type="text/css" media="all">
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css" type="text/css" media="all">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" type="text/css" media="all">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i&display=swap&subset=cyrillic-ext" type="text/css" media="all">
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+
+	<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+
+<body>
+
+<!-- preloader -->
+<div id="preloader">
+	<div class="outer">
+		<div class="spinner">
+			<div class="dot1"></div>
+			<div class="dot2"></div>
+		</div>
+	</div>
+</div>
+
+<!-- site wrapper -->
+<div class="site-wrapper">
+
+	<!-- mobile header -->
+	<div class="mobile-header py-2 px-3 mt-4">
+		<button class="menu-icon mr-2">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+		<a href="index.html" class="logo"><img src="images/me70x70.png" alt="Radin Shayanfar" /></a>
+		<a href="index.html" class="site-title dot ml-2">Radin Shayanfar</a>
+	</div>
+
+	<!-- header -->
+	<header class="left float-left shadow-dark" id="header">
+		<button type="button" class="close" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		</button>
+		<div class="header-inner d-flex align-items-start flex-column">
+			<a href="index.html"><img src="images/me70x70.png" alt="Radin Shayanfar" /></a>
+			<a href="index.html" class="site-title dot mt-3">Radin Shayanfar</a>
+			<span class="site-slogan">Computer Engineer</span>
+
+            <script>
+                const prefix = window.location.pathname.endsWith('index.html') ? '' : '';
+            </script>
+            
+            <!-- navigation menu -->
+            <nav>
+                <ul class="vertical-menu scrollspy">
+                    <li><a href="javascript:void(0)" onclick="loadPage('main')" class="nav-link"><i class="icon-home"></i>Home</a></li>
+                    <li><a href="javascript:void(0)" onclick="navigateToSection('about')" class="nav-link"><i class="icon-user"></i>About</a></li>
+                    <li><a href="javascript:void(0)" onclick="navigateToSection('works')" class="nav-link"><i class="icon-grid"></i>Portfolio</a></li>
+                    <li><a href="javascript:void(0)" onclick="navigateToSection('education')" class="nav-link"><i class="icon-graduation"></i>Education</a></li>
+                    <li><a href="javascript:void(0)" onclick="navigateToSection('contact')" class="nav-link"><i class="icon-phone"></i>Contact</a></li>
+                </ul>
+            </nav>
+			
+			<!-- footer -->
+			<div class="footer mt-auto">
+
+				<!-- social icons -->
+				<ul class="social-icons list-inline">
+					<li class="list-inline-item"><a href="https://github.com/radinshayanfar"><i class="fab fa-github"></i></a></li>
+					<li class="list-inline-item"><a href="https://twitter.com/radinshayanfar"><i class="fab fa-twitter"></i></a></li>
+					<li class="list-inline-item"><a href="https://instagram.com/radinshayanfar"><i class="fab fa-instagram"></i></a></li>
+					<li class="list-inline-item"><a href="https://www.linkedin.com/in/radin-shayanfar/"><i class="fab fa-linkedin"></i></a></li>
+					<li class="list-inline-item"><a href="mailto:me@rshayanfar.ir"><i class="far fa-envelope"></i></a></li>
+				</ul>
+
+				<!-- copyright -->
+                <span class="copyright">© <script>document.write(new Date().getFullYear());</script> Radin Shayanfar</span>
+			</div>
+		</div>
+	</header>
+
+    <!-- main content -->
+    <div id="main-content"></div>
+
+    <script>
+        // Page title mappings
+        const pageTitles = {
+            'captcha': 'Captcha Solver',
+            'gan': 'Generating Handwritten Persian Characters',
+            'habco': 'Habco',
+            'jpotify': 'Jpotify',
+            'konkur98': 'Konkur98',
+            'rjbot': 'RJBot',
+            'samcode': 'SamCode',
+            'single': 'Single Work',
+            'speechbrain': 'SpeechBrain'
+        };
+
+        function loadPage(pageName, pushState = true) {
+            const contentDiv = document.getElementById('main-content');
+
+            let url = pageName === 'main' ? 'main.html' : `contents/${pageName}.html`;
+
+            // Update page title
+            if (pageTitles[pageName]) {
+                document.title = `Radin Shayanfar • ${pageTitles[pageName]}`;
+            } else if (pageName === 'main') {
+                document.title = 'Radin Shayanfar';
+            }
+
+            // Update URL in browser address bar
+            if (pushState) {
+                const newUrl = pageName === 'main' ? '/' : `/${pageName}`;
+                history.pushState({ page: pageName }, document.title, newUrl);
+            }
+
+            fetch(url)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Failed to load ${url}`);
+                    }
+                    return response.text();
+                })
+                .then(html => {
+                    contentDiv.innerHTML = html;
+                })
+                .catch(error => {
+                    contentDiv.innerHTML = `<p>Error loading content: ${error.message}</p>`;
+                });
+        }
+
+        // Handle browser back/forward buttons
+        window.addEventListener('popstate', function(event) {
+            if (event.state && event.state.page) {
+                loadPage(event.state.page, false);
+            } else {
+                // Handle initial page load or manual URL entry
+                const path = window.location.pathname;
+                const pageName = path === '/' ? 'main' : path.substring(1);
+                
+                // Check if the page exists in our page titles or is 'main'
+                if (pageName === 'main' || pageTitles[pageName]) {
+                    loadPage(pageName, false);
+                } else {
+                    loadPage('main', false);
+                }
+            }
+        });
+
+        // Initial page load based on current URL
+        function initializePage() {
+            const path = window.location.pathname;
+            const pageName = path === '/' ? 'main' : path.substring(1);
+            
+            // Check if the page exists in our page titles or is 'main'
+            if (pageName === 'main' || pageTitles[pageName]) {
+                loadPage(pageName, false);
+                // Set initial state for proper back button behavior
+                history.replaceState({ page: pageName }, document.title, path);
+            } else {
+                loadPage('main', false);
+                // Redirect to home if invalid page
+                history.replaceState({ page: 'main' }, 'Radin Shayanfar', '/');
+            }
+        }
+
+        // Handle navigation within the main page (sections)
+        function navigateToSection(sectionId) {
+            // First load the main page if not already loaded
+            if (window.location.pathname !== '/') {
+                loadPage('main');
+                // Wait a bit for the page to load, then scroll to section
+                setTimeout(() => {
+                    const section = document.getElementById(sectionId);
+                    if (section) {
+                        section.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }, 300);
+            } else {
+                const section = document.getElementById(sectionId);
+                if (section) {
+                    section.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        }
+
+        // Initialize the page when DOM is loaded
+        document.addEventListener('DOMContentLoaded', initializePage);
+    </script>
+
+</div>
+
+<!-- Go to top button -->
+<a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
+
+<!-- SCRIPTS -->
+<script src="js/jquery-1.12.3.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.counterup.min.js"></script>
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="js/isotope.pkgd.min.js"></script>
+<script src="js/infinite-scroll.min.js"></script>
+<script src="js/imagesloaded.pkgd.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/contact.js"></script>
+<script src="js/validator.js"></script>
+<script src="js/custom.js"></script>
+
+<!-- Google reCAPTCHA -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="js/recaptcha.js"></script>
+
+</body>
+</html>

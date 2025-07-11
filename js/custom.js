@@ -41,57 +41,59 @@ $(window).on("load",function(){
     });
 
     /*=========================================================================
-     Infinite Scroll
+     Load More Portfolio Items
      =========================================================================*/
-    var curPage = 1;
-    var pagesNum = $(".portfolio-pagination").find("li a:last").text();   // Number of pages
-
-    $container.infinitescroll({
-        itemSelector: '.grid-item',
-        nextSelector: '.portfolio-pagination li a',
-        navSelector: '.portfolio-pagination',
-        extraScrollPx: 0,
-        bufferPx: 0,
-        maxPage: 6,
-        loading: {
-            finishedMsg: "No more works",
-            msgText: '',
-            speed: 'slow',
-            selector: '.load-more',
-        },
-    },
-    // trigger Masonry as a callback
-    function( newElements ) {
-
-      var $newElems = $( newElements );
-      $newElems.imagesLoaded(function(){  
-        $newElems.animate({ opacity: 1 });
-        $container.isotope( 'appended', $newElems );
-      });
-
-      // Check last page
-      curPage++;
-      if(curPage == pagesNum) {
-        $( '.load-more' ).remove();
-      }
-
-    });
-
-    $container.infinitescroll( 'unbind' );
-
-    $( '.load-more .btn' ).on('click', function() {
-      $container.infinitescroll( 'retrieve' );
-      // display loading icon
-      $( '.load-more .btn i' ).css('display', 'inline-block');
-      $( '.load-more .btn i' ).addClass('fa-spin');
-
-      $(document).ajaxStop(function () {
-        setTimeout(function(){
-               // hide loading icon
-          $( '.load-more .btn i' ).hide();
-        }, 1000);
-      });
-      return false;
+    var moreItemsLoaded = false;
+    
+    $( '.load-more .btn' ).on('click', function(e) {
+        e.preventDefault();
+        
+        if (moreItemsLoaded) {
+            return false;
+        }
+        
+        var $loadMoreBtn = $(this);
+        var $icon = $loadMoreBtn.find('i');
+        
+        // Show loading state
+        $icon.removeClass('fas fa-circle-notch').addClass('fas fa-spinner fa-spin');
+        $loadMoreBtn.prop('disabled', true);
+        
+        // Load additional portfolio items from works-2.html
+        $.get('works-2.html', function(data) {
+            var $newItems = $(data).find('.grid-item');
+            
+            if ($newItems.length > 0) {
+                // Add new items to the portfolio
+                $newItems.css('opacity', 0);
+                $container.append($newItems);
+                
+                // Wait for images to load
+                $newItems.imagesLoaded(function() {
+                    // Animate new items in
+                    $newItems.animate({ opacity: 1 }, 500);
+                    
+                    // Reinitialize isotope with new items
+                    $container.isotope('appended', $newItems);
+                    
+                    // Hide load more button since all items are loaded
+                    $('.load-more').fadeOut(500);
+                    moreItemsLoaded = true;
+                });
+            } else {
+                // No more items found
+                $('.load-more').html('<span class="text-muted">No more projects to load</span>');
+            }
+        }).fail(function() {
+            // Error loading more items
+            $loadMoreBtn.html('<span class="text-danger">Error loading more projects</span>');
+        }).always(function() {
+            // Reset loading state
+            $icon.removeClass('fas fa-spinner fa-spin').addClass('fas fa-circle-notch');
+            $loadMoreBtn.prop('disabled', false);
+        });
+        
+        return false;
     });
 
     /* ======= Mobile Filter ======= */

@@ -1,9 +1,3 @@
-<?php
-$page_title = '';
-require('./templates/header.php');
-?>
-
-
 <!-- main content area -->
 <main class="content float-right">
 
@@ -12,9 +6,9 @@ require('./templates/header.php');
 		<div class="cta mx-auto mt-2">
 			<h1 class="mt-0 mb-4">I'm Radin Shayanfar<span class="dot"></span></h1>
 			<p class="mb-4">Computer Engineering student and NLP researcher at Queen's University</p>
-			<a href="#works" class="hero-ln btn btn-default btn-lg mr-3"><i class="icon-grid"></i>View Portfolio</a>
+			<a href="javascript:void(0)" onclick="document.getElementById('works').scrollIntoView({ behavior: 'smooth' })" class="hero-ln btn btn-default btn-lg mr-3"><i class="icon-grid"></i>View Portfolio</a>
 			<div class="spacer d-md-none d-lg-none d-sm-none" data-height="10"></div>
-			<a href="#contact" class="hero-ln btn btn-border-light btn-lg"><i class="icon-envelope"></i>Contact Me</a>
+			<a href="javascript:void(0)" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })" class="hero-ln btn btn-border-light btn-lg"><i class="icon-envelope"></i>Contact Me</a>
 		</div>
 		<div class="overlay"></div>
 	</section>
@@ -47,7 +41,7 @@ require('./templates/header.php');
 					</div>
 				</div>
 				<a href="cv.pdf" class="btn btn-default mr-3"><i class="icon-cloud-download" target="_blank"></i>Download CV</a>
-				<a href="#contact" class="btn btn-alt mt-2 mt-md-0 mt-xs-2"><i class="icon-envelope"></i>Contact Me</a>
+				<a href="javascript:void(0)" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })" class="btn btn-alt mt-2 mt-md-0 mt-xs-2"><i class="icon-envelope"></i>Contact Me</a>
 			</div>
 		</div>
 	</section>
@@ -109,7 +103,7 @@ require('./templates/header.php');
 
 			<!-- portfolio item -->
 			<div class="col-md-4 col-sm-6 grid-item ml">
-				<a href="work-gan.php">
+				<a href="javascript:void(0)" onclick="loadPage('gan')">
 					<div class="portfolio-item">
 						<div class="details">
 							<h4 class="title">Persian Handwritten Characters Generation</h4>
@@ -126,7 +120,7 @@ require('./templates/header.php');
 
 			<!-- portfolio item -->
 			<div class="col-md-4 col-sm-6 grid-item ml">
-				<a href="work-speechbrain.php">
+				<a href="javascript:void(0)" onclick="loadPage('speechbrain')">
 					<div class="portfolio-item">
 						<div class="details">
 							<h4 class="title">Speaker Verification</h4>
@@ -143,7 +137,7 @@ require('./templates/header.php');
 
 			<!-- portfolio item -->
 			<div class="col-md-4 col-sm-6 grid-item web">
-				<a href="work-habco.php">
+				<a href="javascript:void(0)" onclick="loadPage('habco')">
 					<div class="portfolio-item">
 						<div class="details">
 							<h4 class="title">Habco</h4>
@@ -160,7 +154,7 @@ require('./templates/header.php');
 			
 			<!-- portfolio item -->
 			<div class="col-md-4 col-sm-6 grid-item web">
-				<a href="work-samcode.php">
+				<a href="javascript:void(0)" onclick="loadPage('samcode')">
 					<div class="portfolio-item">
 						<div class="details">
 							<h4 class="title">SamCode</h4>
@@ -177,7 +171,7 @@ require('./templates/header.php');
 
 			<!-- portfolio item -->
 			<div class="col-md-4 col-sm-6 grid-item bot">
-				<a href="work-rjbot.php">
+				<a href="javascript:void(0)" onclick="loadPage('rjbot')">
 					<div class="portfolio-item">
 						<div class="details">
 							<h4 class="title">RJBot</h4>
@@ -194,7 +188,7 @@ require('./templates/header.php');
 
 			<!-- portfolio item -->
 			<div class="col-md-4 col-sm-6 grid-item ml">
-				<a href="work-captcha.php">
+				<a href="javascript:void(0)" onclick="loadPage('captcha')">
 					<div class="portfolio-item">
 						<div class="details">
 							<h4 class="title">Captcha Solver</h4>
@@ -377,7 +371,3 @@ require('./templates/header.php');
 	</section>
 	
 </main>
-
-<?php
-require('./templates/footer.php');
-?>

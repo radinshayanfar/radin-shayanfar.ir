@@ -5,3 +5,13 @@ Order allow,deny
 Deny from all
 </FilesMatch>
 
+# Handle client-side routing - redirect all non-file requests to index.html
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !^/index\.html$
+RewriteRule ^(.*)$ /index.html [L]
+
+# Optional: Redirect index.html to root for cleaner URLs
+RewriteCond %{THE_REQUEST} /index\.html[\s?] [NC]
+RewriteRule ^index\.html$ / [R=301,L]
