@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<title>Redirecting...</title>
+	<script>
+		// Alternative GitHub Pages routing using hash
+		// This converts /page to /#/page
+		
+		const path = window.location.pathname;
+		if (path !== '/' && path !== '/index.html') {
+			const pageName = path.substring(1); // Remove leading slash
+			// Redirect to hash-based URL
+			window.location.replace(`/#/${pageName}`);
+		} else {
+			// Just go to main page
+			window.location.replace('/');
+		}
+	</script>
+</head>
+<body>
+	<p>Redirecting...</p>
+</body>
+</html>

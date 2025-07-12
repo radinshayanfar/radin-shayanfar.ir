@@ -133,10 +133,15 @@
                 document.title = 'Radin Shayanfar';
             }
 
-            // Update URL in browser address bar
+            // Update URL in browser address bar using hash
             if (pushState) {
-                const newUrl = pageName === 'main' ? '/' : `/${pageName}`;
-                history.pushState({ page: pageName }, document.title, newUrl);
+                const newHash = pageName === 'main' ? '' : `#/${pageName}`;
+                if (newHash) {
+                    window.location.hash = newHash;
+                } else {
+                    // For main page, clear the hash
+                    history.pushState("", document.title, window.location.pathname + window.location.search);
+                }
             }
 
             fetch(url)
@@ -154,45 +159,56 @@
                 });
         }
 
-        // Handle browser back/forward buttons
-        window.addEventListener('popstate', function(event) {
-            if (event.state && event.state.page) {
-                loadPage(event.state.page, false);
-            } else {
-                // Handle initial page load or manual URL entry
-                const path = window.location.pathname;
-                const pageName = path === '/' ? 'main' : path.substring(1);
-                
-                // Check if the page exists in our page titles or is 'main'
-                if (pageName === 'main' || pageTitles[pageName]) {
+        // Handle browser back/forward buttons and hash changes
+        window.addEventListener('hashchange', function() {
+            const hash = window.location.hash;
+            if (hash.startsWith('#/')) {
+                const pageName = hash.substring(2); // Remove '#/'
+                // Check if the page exists in our page titles
+                if (pageTitles[pageName]) {
                     loadPage(pageName, false);
                 } else {
+                    // Invalid page, go to main
                     loadPage('main', false);
                 }
+            } else {
+                // No hash or invalid hash, load main page
+                loadPage('main', false);
             }
         });
 
-        // Initial page load based on current URL
-        function initializePage() {
-            const path = window.location.pathname;
-            const pageName = path === '/' ? 'main' : path.substring(1);
-            
-            // Check if the page exists in our page titles or is 'main'
-            if (pageName === 'main' || pageTitles[pageName]) {
-                loadPage(pageName, false);
-                // Set initial state for proper back button behavior
-                history.replaceState({ page: pageName }, document.title, path);
-            } else {
+        // Also handle popstate for when user navigates to main page without hash
+        window.addEventListener('popstate', function(event) {
+            if (!window.location.hash) {
                 loadPage('main', false);
-                // Redirect to home if invalid page
-                history.replaceState({ page: 'main' }, 'Radin Shayanfar', '/');
+            }
+        });
+
+        // Initial page load based on current URL hash
+        function initializePage() {
+            const hash = window.location.hash;
+            
+            if (hash.startsWith('#/')) {
+                const pageName = hash.substring(2); // Remove '#/'
+                // Check if the page exists in our page titles
+                if (pageTitles[pageName]) {
+                    loadPage(pageName, false);
+                } else {
+                    // Invalid page, go to main and clear hash
+                    loadPage('main', false);
+                    history.replaceState("", document.title, window.location.pathname + window.location.search);
+                }
+            } else {
+                // No hash, load main page
+                loadPage('main', false);
             }
         }
 
         // Handle navigation within the main page (sections)
         function navigateToSection(sectionId) {
             // First load the main page if not already loaded
-            if (window.location.pathname !== '/') {
+            const hash = window.location.hash;
+            if (hash.startsWith('#/')) {
                 loadPage('main');
                 // Wait a bit for the page to load, then scroll to section
                 setTimeout(() => {

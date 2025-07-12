@@ -5,13 +5,17 @@ Order allow,deny
 Deny from all
 </FilesMatch>
 
+# Note: The following rewrite rules are for Apache servers only
+# GitHub Pages doesn't support .htaccess, so these won't work there
+# Instead, use the 404.html file for client-side routing on GitHub Pages
+
 # Handle client-side routing - redirect all non-file requests to index.html
-RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_URI} !^/index\.html$
-RewriteRule ^(.*)$ /index.html [L]
+# RewriteEngine On
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteCond %{REQUEST_URI} !^/index\.html$
+# RewriteRule ^(.*)$ /index.html [L]
 
 # Optional: Redirect index.html to root for cleaner URLs
-RewriteCond %{THE_REQUEST} /index\.html[\s?] [NC]
-RewriteRule ^index\.html$ / [R=301,L]
+# RewriteCond %{THE_REQUEST} /index\.html[\s?] [NC]
+# RewriteRule ^index\.html$ / [R=301,L]
